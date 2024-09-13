@@ -70,7 +70,7 @@ const emptyCard = {
   answer: <div></div>,
 };
 
-export const FlashcardsPages = ({ cards }: { cards: Card[] }) => {
+export const FlashcardsPages = ({ cards = [] }: { cards: Card[] }) => {
   const chunkedCards = chunk(cards, 3);
   return (
     <>

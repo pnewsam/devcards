@@ -1,5 +1,11 @@
 ---
+import '@/styles/globals.css'
+
 const { content } = Astro.props;
+import {Sidebar} from '@/components/Sidebar';
+
+const path = Astro.url.pathname;
+const subject = path.split('/')[1];
 ---
 
 <html lang="en">
@@ -7,9 +13,25 @@ const { content } = Astro.props;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{content.title}</title>
+		<meta name="generator" content={Astro.generator} />
+		<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css"
+    />
+		<title>DevCards | {content.title}</title>
 	</head>
-	<body>
-		<slot />
+
+	<body class="letter" class="bg-zinc-50">
+		<div class="flex flex-col h-screen bg-zinc-100">
+			<Sidebar client:load subject={subject} />
+			<main class="ml-52 px-8 print:ml-0 print:px-0">
+				<slot />
+			</main>
+		</div>
+		<style>
+      @page {
+        size: letter;
+      }
+    </style>
 	</body>
 </html>

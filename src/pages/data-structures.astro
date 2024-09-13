@@ -1,0 +1,9 @@
+---
+import {FlashcardsPages} from '@/components/FlashcardsPages';
+import {dataStructuresDeck} from '@/data/dataStructuresCards';
+import Main from '../layouts/main.astro';
+---
+
+<Main content={{title: "Data Structures"}}>
+  <FlashcardsPages cards={Object.values(dataStructuresDeck).flat()} />
+</Main>

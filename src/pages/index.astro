@@ -1,31 +1,11 @@
 ---
 // Component Imports
-import App from '@/components/App';
 import Button from '../components/Button.astro';
+import Main from '../layouts/main.astro';
 
 import '@/styles/globals.css'
 ---
 
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.3.0/paper.css"
-    />
-		<meta name="generator" content={Astro.generator} />
-		<title>DevCards</title>
-	</head>
-
-	<body class="letter" class="bg-zinc-50">
-		<App client:load/>
-		<style>
-      @page {
-        size: letter;
-      }
-    </style>
-	</body>
-</html>
+<Main content={{title: "Home"}}>
+</Main>

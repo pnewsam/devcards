@@ -1,0 +1,9 @@
+---
+import Main from '../layouts/main.astro';
+import {FlashcardsPages} from '@/components/FlashcardsPages';
+import {javascriptDeck} from '@/data/javascriptCards';
+---
+
+<Main content={{title: "JavaScript"}}>
+  <FlashcardsPages cards={Object.values(javascriptDeck).flat()} />
+</Main>
