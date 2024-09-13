@@ -39,7 +39,7 @@ export default function App() {
   }, [deck, selectedCategories]);
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen bg-zinc-100">
       <div className="fixed top-0 left-0 bottom-0 z-10 w-52 bg-zinc-900 bg-opacity-90 text-white p-4 shadow-lg print:hidden">
         <nav className="flex flex-col h-full">
           <h1 className="text-xl font-bold mb-6">Flashcards App</h1>
