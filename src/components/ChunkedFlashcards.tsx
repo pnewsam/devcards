@@ -12,7 +12,7 @@ const emptyCard = {
   question: "",
   tags: [],
   answer: <div></div>,
-  };
+};
 
 
 export const ChunkedFlashcards = ({ cards = [] }: { cards: Card[] }) => {

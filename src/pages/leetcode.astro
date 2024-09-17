@@ -1,9 +1,9 @@
 ---
 import Main from '../layouts/main.astro';
-import {FlashcardsPages} from '@/components/FlashcardsPages';
 import {leetcodeDeck} from '@/data/leetcodeCards';
+import { App } from '@/components/App';
 ---
 
 <Main content={{title: "Leetcode"}}>
-  <FlashcardsPages cards={Object.values(leetcodeDeck).flat()} />
+    <App client:load subject="leetcode" />
 </Main>

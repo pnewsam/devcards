@@ -30,8 +30,6 @@ export const Sidebar = ({ subject }: { subject: string }) => {
     setCardIdFilters,
   } = useFilterStore();
 
-  console.log({ cardIdFilters });
-
   const deck = useMemo(() => {
     return getDeckBySubject(subject);
   }, [subject]);
@@ -68,7 +66,6 @@ export const Sidebar = ({ subject }: { subject: string }) => {
     const next = cardIdFilters.includes(cardId.toString())
       ? cardIdFilters.filter((f) => f !== cardId.toString())
       : [...cardIdFilters, cardId.toString()];
-    console.log({ next });
     setCardIdFilters(next);
   };
 

@@ -22,8 +22,7 @@ const subject = path.split('/')[1];
 	</head>
 
 	<body class="letter bg-zinc-100">
-		<Sidebar client:load subject={subject} />
-		<main class="ml-52 px-8 print:ml-0 print:px-0">
+		<main>
 			<slot />
 		</main>
 
