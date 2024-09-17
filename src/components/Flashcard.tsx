@@ -13,7 +13,7 @@ export const Flashcard = ({
     <div
       id={id.toString()}
       className={cn(
-        "bg-white border border-gray-300 p-2 w-[5in] h-[3.5in]",
+        "bg-white border border-gray-300 p-2 w-[5in] h-[3in]",
         className
       )}
     >

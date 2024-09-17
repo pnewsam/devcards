@@ -82,7 +82,7 @@ export const Sidebar = ({ subject }: { subject: string }) => {
               </div>
 
               <ul className="flex flex-col gap-2 text-sm text-zinc-400">
-                {deck[category].map((card: Card) => (
+                {deck[category as keyof Deck].map((card: Card) => (
                   <li
                     key={card.id}
                     className="flex items-center justify-between gap-2"
