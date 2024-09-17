@@ -5,5 +5,5 @@ import {javascriptDeck} from '@/data/javascriptCards';
 ---
 
 <Main content={{title: "JavaScript"}}>
-  <FlashcardsPages cards={Object.values(javascriptDeck).flat()} />
+  <FlashcardsPages cards={Object.values(javascriptDeck).flat()} client:load />
 </Main>

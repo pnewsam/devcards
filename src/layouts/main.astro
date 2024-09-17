@@ -21,13 +21,12 @@ const subject = path.split('/')[1];
 		<title>DevCards | {content.title}</title>
 	</head>
 
-	<body class="letter" class="bg-zinc-50">
-		<div class="flex flex-col h-screen bg-zinc-100">
-			<Sidebar client:load subject={subject} />
-			<main class="ml-52 px-8 print:ml-0 print:px-0">
-				<slot />
-			</main>
-		</div>
+	<body class="letter bg-zinc-100">
+		<Sidebar client:load subject={subject} />
+		<main class="ml-52 px-8 print:ml-0 print:px-0">
+			<slot />
+		</main>
+
 		<style>
       @page {
         size: letter;

@@ -11,6 +11,7 @@ const easyCards = [
       "Given the head of a singly linked list, reverse the list, and return the reversed list. Example 1: Input: head = [1,2,3,4,5] Output: [5,4,3,2,1]",
     subject: "Leetcode",
     category: "Easy",
+    tags: [],
     answer: (
       <>
         <CodeSnippet
@@ -37,6 +38,7 @@ const easyCards = [
       "Given a non-empty array of integers nums, every element appears twice except for one. Find that single one. Example 1: Input: nums = [2,2,1] Output: 1",
     subject: "Leetcode",
     category: "Easy",
+    tags: [],
     answer: (
       <>
         <CodeSnippet
@@ -55,6 +57,88 @@ const easyCards = [
       </>
     ),
   },
+  {
+    id: 88,
+    question: "88. Merge Sorted Array",
+    questionDescription:
+      "Merge two sorted arrays nums1 and nums2 into nums1. nums1 has extra space at the end to accommodate nums2. The final array should be sorted in non-decreasing order.",
+    subject: "Leetcode",
+    category: "Easy",
+    tags: ["Top Interview 150"],
+    answer: (
+      <>
+        <CodeSnippet
+          code={`class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+	a, b, write_index = m-1, n-1, m + n - 1
+
+	while b >= 0:
+		if a >= 0 and nums1[a] > nums2[b]:
+			nums1[write_index] = nums1[a]
+			a -= 1
+		else:
+			nums1[write_index] = nums2[b]
+			b -= 1
+
+		write_index -= 1`}
+          language="python"
+        />
+        <Note>
+          Notes: Start from the end of the array and work backwards. This way we
+          don't overwrite any values in nums1.
+        </Note>
+      </>
+    ),
+  },
+  {
+    id: 27,
+    question: "27. Remove Element",
+    questionDescription:
+      "Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The relative order of the elements may be changed. Return the number of elements in nums which are not equal to val. Example 1: Input: nums = [3,2,2,3], val = 3 Output: 2, nums = [2,2,_,_]",
+    subject: "Leetcode",
+    category: "Easy",
+    tags: ["Top Interview 150"],
+    answer: (
+      <>
+        <CodeSnippet
+          code={`class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0
+        for num in nums:
+            if num != val:
+                nums[k] = num
+                k += 1
+        return k`}
+          language="python"
+        />
+      </>
+    ),
+  },
+  {
+    id: 125,
+    question: "125. Valid Palindrome",
+    questionDescription:
+      "A phrase is a palindrome if, after converting all uppercase letters to lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Given a string s, return true if it is a palindrome, or false otherwise.",
+    subject: "Leetcode",
+    category: "Easy",
+    tags: ["Top Interview 150"],
+    answer: (
+      <CodeSnippet
+        code={`def isPalindrome(self, s):
+    l, r = 0, len(s)-1
+    while l < r:
+        while l < r and not s[l].isalnum():
+            l += 1
+        while l <r and not s[r].isalnum():
+            r -= 1
+        if s[l].lower() != s[r].lower():
+            return False
+        l +=1; r -= 1
+    return True`}
+        language="python"
+      />
+    ),
+  },
 ];
 
 const mediumCards: Card[] = [
@@ -63,6 +147,7 @@ const mediumCards: Card[] = [
     subject: "Leetcode",
     category: "Medium",
     question: "1657. Determine if Two Strings Are Close",
+    tags: [],
     questionDescription:
       "Given two strings word1 and word2, return true if you can make word1 equal to word2 with one or more operations. In one operation, you can swap any two characters (unlimited occurrences) in word1.",
     answer: (
@@ -100,6 +185,7 @@ const mediumCards: Card[] = [
     subject: "Leetcode",
     category: "Medium",
     question: "215. Kth Largest Element in an Array",
+    tags: [],
     questionDescription:
       "Given an integer array nums and an integer k, return the kth largest element in the array. Example 1: Input: nums = [3,2,1,5,6,4], k = 2 Output: 5",
     answer: (

@@ -6,6 +6,7 @@ export const dataStructuresCards: Card[] = [
     id: 1,
     subject: "Data Structures",
     category: "Heaps",
+    tags: [],
     question: "Heap - Definition",
     answer: (
       <div className="prose prose-sm">
@@ -22,6 +23,7 @@ export const dataStructuresCards: Card[] = [
     question: "Heap - Explanation",
     subject: "Data Structures",
     category: "Heaps",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>
@@ -56,6 +58,7 @@ export const dataStructuresCards: Card[] = [
     question: "Heap - Implementation",
     subject: "Data Structures",
     category: "Heaps",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>Implementation requirements:</p>
@@ -88,6 +91,7 @@ export const dataStructuresCards: Card[] = [
     question: "Heap - Use Cases",
     subject: "Data Structures",
     category: "Heaps",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>Common use-cases for a min or max heap are:</p>

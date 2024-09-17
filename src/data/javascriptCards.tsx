@@ -7,6 +7,7 @@ export const javascriptCards: Card[] = [
     id: 1,
     subject: "Javascript",
     category: "Memory Leaks",
+    tags: [],
     question: "Common Sources of Memory Leaks in Javascript",
     answer: (
       <div className="prose prose-sm">
@@ -49,6 +50,7 @@ export const javascriptCards: Card[] = [
     question: "Unintended Reference",
     subject: "Javascript",
     category: "Memory Leaks",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>Unintended Reference</p>
@@ -71,6 +73,7 @@ causeLeak();
     question: "Closures",
     subject: "Javascript",
     category: "Memory Leaks",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>Closures</p>
@@ -94,6 +97,7 @@ let closure = outer(); // largeData is now kept in memory`}
     question: "Event Listeners",
     subject: "Javascript",
     category: "Memory Leaks",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>Event Listeners</p>
@@ -117,6 +121,7 @@ let closure = outer(); // largeData is now kept in memory`}
     question: "Closures",
     subject: "Javascript",
     category: "Memory Leaks",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>Closures</p>
@@ -140,6 +145,7 @@ let closure = outer(); // largeData is now kept in memory`}
     question: "Timers and Intervals",
     subject: "Javascript",
     category: "Memory Leaks",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>Timers and Intervals</p>
@@ -162,6 +168,7 @@ let closure = outer(); // largeData is now kept in memory`}
     question: "DOM References",
     subject: "Javascript",
     category: "Memory Leaks",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>DOM References</p>
@@ -184,6 +191,7 @@ function removeButton() {
     question: "Circular References",
     subject: "Javascript",
     category: "Memory Leaks",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>Circular References</p>
@@ -206,6 +214,7 @@ let circularReference = createCircularReference();
     question: "Cache Mismanagement",
     subject: "javascript",
     category: "Memory Leaks",
+    tags: [],
     answer: (
       <div className="prose prose-sm">
         <p>Cache Mismanagement</p>
